@@ -1,0 +1,10 @@
+<section class="features">
+    <h2>Our Features</h2>
+    <div class="feature-grid">
+      <div class="feature" *ngFor="let feature of features">
+        <img [src]="'assets/icons/' + feature.icon + '.svg'" [alt]="feature.title">
+        <h3>{{ feature.title }}</h3>
+        <p>{{ feature.description }}</p>
+      </div>
+    </div>
+</section>

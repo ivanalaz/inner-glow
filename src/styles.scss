@@ -13,6 +13,8 @@ body {
 
 $primary-color: #9b666f;
 $secondary-color: #ebccd1;
+$ternary-color: #bc8f8f; /* Rosybrown */
+$dusty-pink: #d8a8a8;
 $card-color: #ddb5bca6; //f0e4e2;
 $text-color: #333;
 $error-color: #d9534f;
@@ -21,3 +23,23 @@ $background-color: #fff8f5;
 $font-family: 'Poppins', sans-serif;
 $base-spacing: 1rem;
 $max-width: 1200px;
+
+html, body { height: 100%; }
+body { 
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+
+.mat-toolbar {
+  background: $background-color;
+  color: white;
+}
+
+.mat-sidenav {
+  background: $ternary-color;
+  color: white;
+}
+
+.mat-icon {
+  color: black;
+}

@@ -1,0 +1,25 @@
+<section class="community">
+  <h2>Our Happy Community</h2>
+  <p class="subtitle">Hear from inspiring women around the world.</p>
+  
+  <div class="testimonial-carousel" >
+    <button class="nav-btn prev" (click)="prevTestimonial()">&lt;</button>
+    <!-- <img src="../../assets/images/testimonial-image.jpg"/> -->
+    <div class="testimonial" [@testAnimation]="'in'">
+      <img [src]="testimonials[currentIndex].imagePath" [alt]="testimonials[currentIndex].author" class="testimonial-image">
+      <div class="testimonial-content">
+        <p class="quote">{{ testimonials[currentIndex].quote }}</p>
+        <p class="author">{{ testimonials[currentIndex].author }}, {{ testimonials[currentIndex].role }}</p>
+      </div>
+    </div>
+    
+    <button class="nav-btn next" (click)="nextTestimonial()">&gt;</button>
+  </div>
+</section>
+
+<!-- <div>
+  <button (click)="toggleVisibility()">Toggle Animation</button>
+  <div *ngIf="show" [@testAnimation]>
+    <p>Animated Content</p>
+  </div>
+</div> -->

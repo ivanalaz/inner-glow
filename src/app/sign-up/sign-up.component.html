@@ -1,0 +1,166 @@
+<app-header></app-header>
+
+<div class="signup-page">
+  <div class="signup-container">
+    <mat-card>
+      <!-- <img src="../../assets/images/logo.png" alt="InnerGlow Logo" class="logo"> -->
+      <h2>Join InnerGlow</h2>
+      <form (ngSubmit)="onSubmit()" [formGroup]="signupForm">
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" formControlName="firstName" required>
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" formControlName="lastName" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" formControlName="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" formControlName="password" required>
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" id="confirmPassword" formControlName="confirmPassword" required>
+        </div>
+        <!-- <div class="form-group">
+          <label for="dateOfBirth">Date of Birth (optional)</label>
+          <input type="date" id="dateOfBirth" formControlName="dateOfBirth">
+        </div>
+        <div class="form-group">
+          <label for="gender">Gender (optional)</label>
+          <select id="gender" formControlName="gender">
+            <option value="">Select gender</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="non-binary">Non-Binary</option>
+            <option value="prefer-not-to-say">Prefer not to say</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Interests (optional)</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" formControlName="interestFitness"> Fitness</label>
+            <label><input type="checkbox" formControlName="interestMindfulness"> Mindfulness</label>
+            <label><input type="checkbox" formControlName="interestProductivity"> Productivity</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" formControlName="cycleTracking">
+            Opt-in for Menstrual Cycle Tracking (optional)
+          </label>
+        </div>
+        <div class="form-group">
+          <label for="language">Preferred Language (optional)</label>
+          <select id="language" formControlName="language">
+            <option value="english">English</option>
+            <option value="serbian">Serbian</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" formControlName="newsletter">
+            Subscribe to our newsletter
+          </label>
+        </div>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" formControlName="terms" required>
+            I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>
+          </label>
+        </div> -->
+        <!-- <div class="form-group">
+          <!- Placeholder for captcha ->
+          <div class="captcha">Captcha placeholder</div>
+        </div> -->
+        <button type="submit" class="btn-signup">Sign Up</button>
+        <div class="additional-links">
+          <a routerLink="/login">Already have an account?</a>
+        </div>
+      </form>
+    </mat-card>
+  </div>
+  <div class="image-container">
+  
+    <img src="../../assets/images/sign-up2.jpg" alt="InnerGlow Wellness" class="signup-image">
+  </div>
+</div>
+
+  
+  <!--  
+  <div class="signup-page">
+    <div class="signup-container">
+      <mat-card>
+        <img src="../../assets/images/logo.png" alt="InnerGlow Logo" class="logo">
+        <h2>Join InnerGlow</h2>
+        <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+          <mat-form-field appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input matInput formControlName="firstName" required>
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline">
+            <mat-label>Last Name</mat-label>
+            <input matInput formControlName="lastName" required>
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline">
+            <mat-label>Email Address</mat-label>
+            <input matInput type="email" formControlName="email" required>
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName="password" required>
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline">
+            <mat-label>Confirm Password</mat-label>
+            <input matInput type="password" formControlName="confirmPassword" required>
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline">
+            <mat-label>Date of Birth (optional)</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="dateOfBirth">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline">
+            <mat-label>Gender (optional)</mat-label>
+            <mat-select formControlName="gender">
+              <mat-option value="female">Female</mat-option>
+              <mat-option value="male">Male</mat-option>
+              <mat-option value="non-binary">Non-Binary</mat-option>
+              <mat-option value="prefer-not-to-say">Prefer not to say</mat-option>
+            </mat-select>
+          </mat-form-field>
+  
+          <div class="interests-section">
+            <h3>Interests</h3>
+            <mat-checkbox formControlName="interestFitness">Fitness</mat-checkbox>
+            <mat-checkbox formControlName="interestMindfulness">Mindfulness</mat-checkbox>
+            <mat-checkbox formControlName="interestProductivity">Productivity</mat-checkbox>
+          </div>
+  
+          <mat-checkbox formControlName="terms" required>
+            I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>
+          </mat-checkbox>
+  
+          <button mat-raised-button color="primary" type="submit" class="btn-signup">Sign Up</button>
+  
+          <div class="additional-links">
+            <a href="#">Already have an account? Log in</a>
+          </div>
+        </form>
+      </mat-card>
+    </div>
+    <div class="image-container">
+      <!- Replace with your actual image ->
+      <img src="../../assets/images/sign-up2.jpg" alt="InnerGlow Wellness" class="signup-image">
+    </div>
+  </div>-->

@@ -1,0 +1,47 @@
+@import '../../styles';
+
+footer {
+  background-color: $primary-color;
+  color: white;
+  padding: 2rem;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+
+    .contact-info,
+    .legal-links,
+    .social-media {
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+      margin-right: 1rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .social-media {
+      a {
+        font-size: 1.5rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0);
+  }
+}
