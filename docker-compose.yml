@@ -1,0 +1,33 @@
+#version: '3.9'  # Specify the version of docker-compose
+
+services:
+  mysql:
+    image: 'mysql:latest'
+    container_name: mysql_container
+    environment:
+      - MYSQL_DATABASE=innerglow
+#      - MYSQL_USER=root
+   #   - MYSQL_PASSWORD=Admin123!
+      - MYSQL_ROOT_PASSWORD=Admin123!
+    ports:
+      - '3306:3306'
+    volumes:
+      - mysql_data:/var/lib/mysql
+#
+#  app:
+#    image: innerglow_app
+#    build:
+#      context: .
+#      dockerfile: Dockerfile
+#    container_name: app_container
+#    ports:
+#      - '8080:8080'
+#    depends_on:
+#      - mysql
+#    environment:
+#      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/innerglow
+#      SPRING_DATASOURCE_USERNAME: root
+#      SPRING_DATASOURCE_PASSWORD: Admin123!
+
+volumes:
+  mysql_data:
